@@ -1,0 +1,8 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	direction: rtl;
+	font-family: "Vaizr";
+	line-height: 1.2em; 
+}
