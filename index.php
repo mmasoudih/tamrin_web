@@ -18,20 +18,61 @@
 
 
 <div class="container">
-	<div class="questionBox">
-		<div class="title">
-			<p>
-				<span>1</span>
-				شعاع دایره را گرفته قطر، محیط و مساحت آن را به‌دست آورید.
-			</p>
-		</div>
-		<div class="content">
-			<div class="sectionRight">
-				<input type="number" class="radius" placeholder="شعاع دایره را وارد کنید">
-			</div>
-			<div class="sectionLeft"></div>
-		</div>
-	</div>
+    <div class="questionBox">
+        <div class="title">
+            <p>
+                <span>1</span>
+                شعاع دایره را گرفته قطر، محیط و مساحت آن را به‌دست آورید.
+            </p>
+        </div>
+        <div class="content">
+            <div class="sectionRight">
+                <input type="number" class="radius" placeholder="شعاع دایره را وارد کنید">
+            </div>
+            <div class="sectionLeft sectionLeftQ1"></div>
+        </div>
+    </div>
+
+
+
+
+    <div class="questionBox">
+        <div class="title">
+            <p>
+                <span>1</span>
+                شعاع دایره را گرفته قطر، محیط و مساحت آن را به‌دست آورید.
+            </p>
+        </div>
+        <div class="content">
+            <div class="sectionRight">
+                <input type="number" class="n" placeholder="عرض مستطیل" max="30">
+                <input type="number" class="m" placeholder="طول مستطیل" max="30">
+                 <div class="checkBox">
+                    تو پر باشه ؟
+                     <div class="cbx">
+                  <input id="cbx" type="checkbox" onchange="fillRectangle(this)"/>
+                  <label for="cbx"></label>
+                  <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                  </svg>
+                </div>
+                <!-- Gooey-->
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                    <filter id="goo">
+                      <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                      <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo"></fecolormatrix>
+                      <feblend in="SourceGraphic" in2="goo"></feblend>
+                    </filter>
+                  </defs>
+                </svg>
+                 </div>
+                
+            </div>
+            <div class="sectionLeft sectionLeftQ2"></div>
+        </div>
+    </div>
+
 </div>
 
 
@@ -66,48 +107,6 @@
 <!-- shoa * pi * 2 // mohit
 pi *  (R*R) // masahat -->
 <?php
-/*if(isset($_POST['radius'])){
-	$r = $_POST['radius'];
-	echo (M_PI * ($r*$r));
-	echo "<br>";
-	echo floor((M_PI * ($r*$r)));
-
-	echo "<br>";
-	echo (($r*M_PI) * 2);
-	echo "<br>";
-	echo floor(($r*M_PI) * 2);
-
-}
-*/
-
-
-
-// function print_rectangle($n, $m) 
-// { 
-//     $i;  
-//     $j; 
-//     for ($i = 1; $i <= $n; $i++) 
-//     { 
-//         for ($j = 1; $j <= $m; $j++) 
-//         { 
-//             if ($i == 1 || $i == $n ||  
-//                 $j == 1 || $j == $m)          
-//                 echo("* ");          
-//             else
-//                 echo("&nbsp;&nbsp;&nbsp;");          
-//         } 
-//         echo("<br>"); 
-//     } 
-  
-// } 
-  
-//     // Driver Code 
-//     $rows = 5;  
-//     $columns = 5; 
-//     // echo "<pre>";
-//     print_rectangle($rows, $columns); 
-//     // echo "</pre>";
-
 
 
 
@@ -263,7 +262,7 @@ for ($i = $a; $i > 0; $i--) {
 }
 echo "</pre>";
 */
-/*
+
 echo "<pre>";
 function printPattern($n,$filled = false) 
 { 
@@ -328,8 +327,8 @@ function printPattern($n,$filled = false)
   
 // This Code is contributed by mits  
 
-*/
-// echo "</pre>";
+
+echo "</pre>";
 
 /*
 function printDivisors($n) 
