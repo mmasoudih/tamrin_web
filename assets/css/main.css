@@ -105,7 +105,15 @@ pre {
 .sectionLeft > p > span {
   float: left;
   font-weight: bolder;
+  direction: ltr;
 }
+.res:nth-child(even){
+  color: red;
+}
+.res:nth-child(odd){
+  color: green;
+}
+
 .content {
   display: flex;
   flex-direction: row;

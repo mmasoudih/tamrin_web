@@ -7,6 +7,8 @@ particlesJS.load('particles-js', '/assets/js/particlesjs-config.json', function 
 
 
 var rectangleIsFilled = 0;
+var triangleIsFilled = 1;
+var isFilldiamond = 1;
 
 function getElement(classNameOrId) {
 	return document.querySelector(classNameOrId);
@@ -31,13 +33,41 @@ function fillRectangle(el) {
 
 }
 
+function fillTriangle(ela) {
+	if (ela.checked) {
+		triangleIsFilled = 2;
+		question10();
+	} else {
+		triangleIsFilled = 1;
+		question10();
+	}
+
+}
+
+function filldiamond(ela) {
+	if (ela.checked) {
+		isFilldiamond = 2;
+		question13();
+	} else {
+		isFilldiamond = 1;
+		question13();
+	}
+
+}
+
+
+function createInput() {
+	let input = createElement('input');
+	input.setAttribute('class')
+}
+
 function question1() {
 	if (getElement('.radius').value !== '') {
-		if (Math.sign(getElement('.radius').value) > 0){
+		if (Math.sign(getElement('.radius').value) > 0) {
 			axios.get(`/answers/answers.php?q1&radius=${getElement('.radius').value}`)
-			.then(res => {
-	
-				getElement('.sectionLeftQ1').innerHTML = `
+				.then(res => {
+
+					getElement('.sectionLeftQ1').innerHTML = `
 				<p>
 					<strong>مساحت دایره :</strong>
 					<span>${res.data.environment}</span>
@@ -58,31 +88,18 @@ function question1() {
 					<strong>قطر دایره:</strong>
 					<span>${res.data.diameter}</span>
 				</p>`;
-			})
-		}else {
+				})
+		} else {
 			getElement('.sectionLeftQ1').innerHTML = `
 			
 			<span style='color:red'>عدد منفی یا صفر وارد نکنید</span>
 		
 		`;
 		}
-	
+
 	}
 }
 
-// function question2() {
-
-// axios.get(`http://localhost:8585/answers/print_rectangle.php?n=${getElement('.n').value}&m=${getElement('.m').value}&filled=${rectangleIsFilled}`)
-// 	.then(res => {
-
-// 		getElement('.sectionLeftQ2').innerHTML = `
-// 			<pre>
-// 				${res.data.rectangle}
-// 			</pre>
-// 			`;
-// 	})
-
-// }
 function question2() {
 	if (getElement('.number1').value !== '' && getElement('.number2').value !== '') {
 		if (Math.sign(getElement('.number1').value) > 0 &&
@@ -178,7 +195,7 @@ function question4() {
 		if (Math.sign(getElement('.numberQ4').value) > 0) {
 			axios.get(`/answers/answers.php?q_4&n=${getElement('.numberQ4').value}`)
 				.then(res => {
-					console.log(res);
+					
 					getElement('.sectionLeftQ4').innerHTML = `
 				<p>
 				<strong>حاصل  :</strong>
@@ -208,7 +225,7 @@ function question5() {
 		) {
 			axios.get(`/answers/answers.php?q_5&x=${getElement('.numberQ5_1').value}&y=${getElement('.numberQ5_2').value}&z=${getElement('.numberQ5_3').value}`)
 				.then(res => {
-					console.log(res);
+					
 					getElement('.sectionLeftQ5').innerHTML = `
 				<p>
 				<strong>حاصل  :</strong>
@@ -242,7 +259,7 @@ function question6() {
 		) {
 			axios.get(`/answers/answers.php?q_6&x=${getElement('.numberQ6_1').value}&y=${getElement('.numberQ6_2').value}`)
 				.then(res => {
-					console.log(res);
+					
 					getElement('.sectionLeftQ6').innerHTML = `
 				<p>
 				<strong>حاصل  :</strong>
@@ -274,7 +291,7 @@ function question7() {
 		) {
 			axios.get(`/answers/answers.php?q_7&x=${getElement('.numberQ7_1').value}&y=${getElement('.numberQ7_2').value}`)
 				.then(res => {
-					console.log(res);
+					
 					getElement('.sectionLeftQ7').innerHTML = `
 				<p>
 				<strong>حاصل  :</strong>
@@ -305,7 +322,7 @@ function question8() {
 		if (Math.sign(getElement('.numberQ8_1').value) > 0) {
 			axios.get(`/answers/answers.php?q_8&x=${getElement('.numberQ8_1').value}`)
 				.then(res => {
-					console.log(res);
+					
 					getElement('.sectionLeftQ8').innerHTML = `
 				<pre>
 				${res.data.result}
@@ -323,14 +340,211 @@ function question8() {
 	}
 }
 
+function question9() {
+	if (getElement('.numberQ9_1').value !== '' && getElement('.numberQ9_2').value !== '') {
+		if (Math.sign(getElement('.numberQ9_1').value) > 0) {
+
+			axios.get(`/answers/answers.php?q_9&x=${getElement('.numberQ9_1').value}&y=${getElement('.numberQ9_2').value}&status=${rectangleIsFilled}`)
+				.then(res => {
+					
+					getElement('.sectionLeftQ9').innerHTML = `
+				<pre>
+				${res.data.result}
+				</pre>
+			`;
+				})
+		} else {
+			getElement('.sectionLeftQ9').innerHTML = `
+				<p>
+				<strong style='color:red'>عدد منفی یا صفر وارد نکنید</strong>
+			</p>
+			`;
+		}
+
+	} else {
+		getElement('.sectionLeftQ9').innerHTML = `
+				<p>
+				<strong style='color:red'>همه اعداد را وارد کنید</strong>
+			</p>
+			`;
+	}
+}
+
+
+function question10() {
+	if (getElement('.numberQ10_1').value !== '') {
+		if (Math.sign(getElement('.numberQ10_1').value) > 0) {
+
+			axios.get(`/answers/answers.php?q_10&x=${getElement('.numberQ10_1').value}&status=${triangleIsFilled}`)
+				.then(res => {
+					
+					getElement('.sectionLeftQ10').innerHTML = `
+				<div style="width:100%;display:flex;">
+					<div>
+						<pre>
+						${res.data.triangle1}
+						</pre>
+						<pre>
+						${res.data.triangle2}
+						</pre>
+					</div>
+					<div>
+						<pre>
+						${res.data.triangle3}
+						</pre>
+						<pre>
+						${res.data.triangle4}
+						</pre>
+					</div>
+				</div>
+			`;
+				})
+		} else {
+			getElement('.sectionLeftQ10').innerHTML = `
+				<p>
+				<strong style='color:red'>عدد منفی یا صفر وارد نکنید</strong>
+			</p>
+			`;
+		}
+
+	}
+}
+
+
+
+function question11() {
+	if (getElement('.numberQ11_1').value !== '' ||
+		getElement('.numberQ11_2').value !== '' ||
+		getElement('.numberQ11_3').value !== ''
+
+	) {
+
+
+		axios.get(`/answers/answers.php?q_11&x=${getElement('.numberQ11_1').value}&y=${getElement('.numberQ11_2').value}&z=${getElement('.numberQ11_3').value}`)
+			.then(res => {
+				
+				getElement('.sectionLeftQ11').innerHTML = `
+				<p>
+					<strong>کمترین  :</strong>
+					<span>${res.data.result.minimum}</span>
+				</p>
+				<p>
+					<strong>بیشترین  :</strong>
+					<span>${res.data.result.maximum}</span>
+				</p>
+			`;
+			})
+	} else {
+		getElement('.sectionLeftQ11').innerHTML = `
+				<p>
+				<strong style='color:red'>عدد منفی یا صفر وارد نکنید</strong>
+			</p>
+			`;
+	}
+
+}
+
+function question12() {
+	if (getElement('.numberQ12_1').value !== '' ||
+		getElement('.numberQ12_2').value !== '' ||
+		getElement('.numberQ12_3').value !== '' ||
+		getElement('.numberQ12_4').value !== '' ||
+		getElement('.numberQ12_5').value !== '' ||
+		getElement('.numberQ12_6').value !== ''
+
+	) {
+		axios.get(`/answers/answers.php?q_12&a=${getElement('.numberQ12_1').value}&b=${getElement('.numberQ12_2').value}&c=${getElement('.numberQ12_3').value}&d=${getElement('.numberQ12_4').value}&e=${getElement('.numberQ12_5').value}&f=${getElement('.numberQ12_6').value}`)
+			.then(res => {
+				
+				getElement('.sectionLeftQ12').innerHTML = `
+				<p>
+					<strong>کمرین ۱  :</strong>
+					<span>${res.data.min1}</span>
+				</p>
+				<p>
+					<strong>کمرین ۲  :</strong>
+					<span>${res.data.min2}</span>
+				</p>
+				<p>
+					<strong>کمرین ۳  :</strong>
+					<span>${res.data.min3}</span>
+				</p>
+				<p>
+					<strong>بیشترین ۱  :</strong>
+					<span>${res.data.max1}</span>
+				</p>
+				<p>
+					<strong>بیشترین ۲  :</strong>
+					<span>${res.data.max2}</span>
+				</p>
+				<p>
+					<strong>بیشترین ۳  :</strong>
+					<span>${res.data.max3}</span>
+				</p>
+			`;
+			})
+	} else {
+		getElement('.sectionLeftQ12').innerHTML = `
+				<p>
+				<strong style='color:red'>عدد منفی یا صفر وارد نکنید</strong>
+			</p>
+			`;
+	}
+
+}
 
 
 
 
+function question13() {
+	if (getElement('.numberQ13_1').value !== '') {
+		if (Math.sign(getElement('.numberQ13_1').value) > 0) {
+			axios.get(`/answers/answers.php?q_13&x=${getElement('.numberQ13_1').value}&status=${isFilldiamond}`)
+				.then(res => {
+					
+					getElement('.sectionLeftQ13').innerHTML = `
+				<pre>
+				${res.data.result}
+				</pre>
+			`;
+				})
+		} else {
+			getElement('.sectionLeftQ13').innerHTML = `
+				<p>
+				<strong style='color:red'>عدد منفی یا صفر وارد نکنید</strong>
+			</p>
+			`;
+		}
+
+	}
+}
 
 
 
 
+function question14() {
+	if (getElement('.numberQ14_1').value !== '') {
+		if (Math.sign(getElement('.numberQ14_1').value) > 0) {
+			axios.get(`/answers/answers.php?q_14&x=${getElement('.numberQ14_1').value}`)
+				.then(res => {
+					
+					getElement('.sectionLeftQ14').innerHTML = `
+					<p>
+					<strong>حاصل : </strong>
+					<span>${res.data.result}</span>
+				</p>
+			`;
+				})
+		} else {
+			getElement('.sectionLeftQ14').innerHTML = `
+				<p>
+				<strong style='color:red'>عدد منفی یا صفر وارد نکنید</strong>
+			</p>
+			`;
+		}
+
+	}
+}
 
 
 
@@ -568,6 +782,208 @@ document.body.addEventListener('input', e => {
 
 		question8();
 	}
+
+	if (e.target.value != '' && e.target.classList.contains('numberQ9_1') || e.target.classList.contains('numberQ9_2')) {
+
+		if (e.target.classList.contains('numberQ9_1')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ9_1', 'success');
+				removeError('.numberQ9_1', 'error');
+			} else {
+				removeError('.numberQ9_1', 'success');
+				setError('.numberQ9_1', 'error');
+				getElement('.sectionLeftQ9').innerHTML = '';
+			}
+
+		}
+		if (e.target.classList.contains('numberQ9_2')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ9_2', 'success');
+				removeError('.numberQ9_2', 'error');
+			} else {
+				removeError('.numberQ9_2', 'success');
+				setError('.numberQ9_2', 'error');
+				getElement('.sectionLeftQ9').innerHTML = '';
+			}
+
+		}
+
+		question9();
+	}
+
+	if (e.target.value != '' && e.target.classList.contains('numberQ10_1')) {
+		if (e.target.classList.contains('numberQ10_1')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ10_1', 'success');
+				removeError('.numberQ10_1', 'error');
+			} else {
+				removeError('.numberQ10_1', 'success');
+				setError('.numberQ10_1', 'error');
+				getElement('.sectionLeftQ10').innerHTML = '';
+			}
+		}
+		question10();
+	}
+
+	if (e.target.value != '' && e.target.classList.contains('numberQ11_1') ||
+		e.target.classList.contains('numberQ11_2') ||
+		e.target.classList.contains('numberQ11_3')
+
+	) {
+		if (e.target.classList.contains('numberQ11_1')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ11_1', 'success');
+				removeError('.numberQ11_1', 'error');
+			} else {
+				removeError('.numberQ11_1', 'success');
+				setError('.numberQ11_1', 'error');
+				getElement('.sectionLeftQ11').innerHTML = '';
+			}
+		}
+		if (e.target.classList.contains('numberQ11_2')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ11_2', 'success');
+				removeError('.numberQ11_2', 'error');
+			} else {
+				removeError('.numberQ11_2', 'success');
+				setError('.numberQ11_2', 'error');
+				getElement('.sectionLeftQ11').innerHTML = '';
+			}
+		}
+		if (e.target.classList.contains('numberQ11_3')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ11_3', 'success');
+				removeError('.numberQ11_3', 'error');
+			} else {
+				removeError('.numberQ11_3', 'success');
+				setError('.numberQ11_3', 'error');
+				getElement('.sectionLeftQ11').innerHTML = '';
+			}
+		}
+
+		question11();
+	}
+
+
+
+
+	if (e.target.value != '' &&
+		e.target.classList.contains('numberQ12_1') ||
+		e.target.classList.contains('numberQ12_2') ||
+		e.target.classList.contains('numberQ12_3') ||
+		e.target.classList.contains('numberQ12_4') ||
+		e.target.classList.contains('numberQ12_5') ||
+		e.target.classList.contains('numberQ12_6')
+
+
+	) {
+		if (e.target.classList.contains('numberQ12_1')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ12_1', 'success');
+				removeError('.numberQ12_1', 'error');
+			} else {
+				removeError('.numberQ12_1', 'success');
+				setError('.numberQ12_1', 'error');
+				getElement('.sectionLeftQ12').innerHTML = '';
+			}
+		}
+
+		if (e.target.classList.contains('numberQ12_2')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ12_2', 'success');
+				removeError('.numberQ12_2', 'error');
+			} else {
+				removeError('.numberQ12_2', 'success');
+				setError('.numberQ12_2', 'error');
+				getElement('.sectionLeftQ12').innerHTML = '';
+			}
+		}
+
+		if (e.target.classList.contains('numberQ12_3')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ12_3', 'success');
+				removeError('.numberQ12_3', 'error');
+			} else {
+				removeError('.numberQ12_3', 'success');
+				setError('.numberQ12_3', 'error');
+				getElement('.sectionLeftQ12').innerHTML = '';
+			}
+		}
+
+		if (e.target.classList.contains('numberQ12_4')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ12_4', 'success');
+				removeError('.numberQ12_4', 'error');
+			} else {
+				removeError('.numberQ12_4', 'success');
+				setError('.numberQ12_4', 'error');
+				getElement('.sectionLeftQ12').innerHTML = '';
+			}
+		}
+
+		if (e.target.classList.contains('numberQ12_5')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ12_5', 'success');
+				removeError('.numberQ12_5', 'error');
+			} else {
+				removeError('.numberQ12_5', 'success');
+				setError('.numberQ12_5', 'error');
+				getElement('.sectionLeftQ12').innerHTML = '';
+			}
+		}
+
+		if (e.target.classList.contains('numberQ12_6')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ12_6', 'success');
+				removeError('.numberQ12_6', 'error');
+			} else {
+				removeError('.numberQ12_6', 'success');
+				setError('.numberQ12_6', 'error');
+				getElement('.sectionLeftQ12').innerHTML = '';
+			}
+		}
+
+
+
+		question12();
+	}
+
+
+
+	if (e.target.value != '' && e.target.classList.contains('numberQ13_1')) {
+		if (e.target.classList.contains('numberQ13_1')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ13_1', 'success');
+				removeError('.numberQ13_1', 'error');
+			} else {
+				removeError('.numberQ13_1', 'success');
+				setError('.numberQ13_1', 'error');
+				getElement('.sectionLeftQ13').innerHTML = '';
+			}
+		}
+		question13();
+	}
+
+
+
+
+	if (e.target.value != '' && e.target.classList.contains('numberQ14_1')) {
+		if (e.target.classList.contains('numberQ14_1')) {
+			if (Math.sign(e.target.value) > 0) {
+				setError('.numberQ14_1', 'success');
+				removeError('.numberQ14_1', 'error');
+			} else {
+				removeError('.numberQ14_1', 'success');
+				setError('.numberQ14_1', 'error');
+				getElement('.sectionLeftQ14').innerHTML = '';
+			}
+		}
+		question14();
+	}
+
+
+
+
 
 
 

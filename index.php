@@ -101,7 +101,7 @@
             <div class="content">
                 <div class="sectionRight">
                     <input type="number" class="numberQ4" placeholder="عدد را وارد کنید">
-                   
+
                 </div>
                 <div class="sectionLeft sectionLeftQ4"></div>
             </div>
@@ -111,10 +111,10 @@
         <div class="questionBox">
             <div class="title">
                 <p>
-                    <span>5</span> 
-                    x , y , z 
-                    را گرفته 
-                    x را به توان y رسانده 
+                    <span>5</span>
+                    x , y , z
+                    را گرفته
+                    x را به توان y رسانده
                     ،
                     و با z جمع کند
                     .
@@ -125,7 +125,7 @@
                     <input type="number" class="numberQ5_1" placeholder="عدد اول">
                     <input type="number" class="numberQ5_2" placeholder="عدد دوم">
                     <input type="number" class="numberQ5_3" placeholder="عدد سوم">
-                   
+
                 </div>
                 <div class="sectionLeft sectionLeftQ5"></div>
             </div>
@@ -134,7 +134,7 @@
         <div class="questionBox">
             <div class="title">
                 <p>
-                    <span>6</span> 
+                    <span>6</span>
                     دو عدد را گرفته و حاصل جمع اعداد زوج بین آنها را محاسبه نماید
                 </p>
             </div>
@@ -142,8 +142,8 @@
                 <div class="sectionRight">
                     <input type="number" class="numberQ6_1" placeholder="عدد اول">
                     <input type="number" class="numberQ6_2" placeholder="عدد دوم">
-                    
-                   
+
+
                 </div>
                 <div class="sectionLeft sectionLeftQ6"></div>
             </div>
@@ -152,7 +152,7 @@
         <div class="questionBox">
             <div class="title">
                 <p>
-                    <span>7</span> 
+                    <span>7</span>
                     دو عدد را گرفته میانگین آن دو عدد را محاسبه نماید
                 </p>
             </div>
@@ -169,33 +169,221 @@
         <div class="questionBox">
             <div class="title">
                 <p>
-                    <span>8</span> 
+                    <span>8</span>
                     ضلع مربع را گرفته آن را رسم نماید
                 </p>
             </div>
             <div class="content">
                 <div class="sectionRight">
                     <input type="number" class="numberQ8_1" placeholder="ضلع مربع را وارد کنید">
-                   
+
                 </div>
                 <div class="sectionLeft sectionLeftQ8"></div>
             </div>
         </div>
 
+        <div class="questionBox">
+            <div class="title">
+                <p>
+                    <span>9</span>
+
+                    طول و عرض مستطیل را گرفته و آن را رسم نمایید
+                    
+                </p>
+            </div>
+            <div class="content">
+
+                <div class="sectionRight">
+                    <input type="number" class="numberQ9_1" placeholder="طول" max="30">
+                    <input type="number" class="numberQ9_2" placeholder="عرض" max="30">
+                    <div class="checkBox">
+                        تو پر باشه ؟
+                        <div class="cbx">
+                            <input id="cbx" type="checkbox" onchange="fillRectangle(this)" />
+                            <label for="cbx"></label>
+                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                            </svg>
+                        </div>
+                        <!-- Gooey-->
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <defs>
+                                <filter id="goo">
+                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo"></fecolormatrix>
+                                    <feblend in="SourceGraphic" in2="goo"></feblend>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="sectionLeft sectionLeftQ9"></div>
+            </div>
+            
+        </div>
 
 
 
-        
+
+
+
+
+        <div class="questionBox">
+            <div class="title">
+                <p>
+                    <span>10</span>
+
+                   ضلع مثلث را گرفته و آن را رسم کنید
+                </p>
+            </div>
+            <div class="content">
+
+                <div class="sectionRight">
+                    <input type="number" class="numberQ10_1" placeholder="ضلع مثلث" max="30">
+                   
+                    <div class="checkBox"> 
+                        تو پر باشه ؟
+                        <div class="cbx">
+                            <input id="cbx" type="checkbox" onchange="fillTriangle(this)" />
+                            <label for="cbx"></label>
+                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                            </svg>
+                        </div>
+                        <!-- Gooey-->
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <defs>
+                                <filter id="goo">
+                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo"></fecolormatrix>
+                                    <feblend in="SourceGraphic" in2="goo"></feblend>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="sectionLeft sectionLeftQ10"></div>
+            </div>
+            
+        </div>
+
+
+
+
+        <div class="questionBox">
+            <div class="title">
+                <p>
+                    <span>11</span>
+
+                    چند عدد را گرفته و کوچکترین و بزرگترین آن را نمایش دهد
+
+
+                </p>
+            </div>
+            <div class="content">
+
+                <div class="sectionRight">
+                    <input type="number" class="numberQ11_1" placeholder="عدد اول">
+                    <input type="number" class="numberQ11_2" placeholder="عدد دوم">
+                    <input type="number" class="numberQ11_3" placeholder="عدد سوم">
+                   
+                    
+                </div>
+                <div class="sectionLeft sectionLeftQ11"></div>
+            </div>
+            
+        </div>
+
+
+        <div class="questionBox">
+            <div class="title">
+                <p>
+                    <span>12</span>
+
+                    چند عدد را گرفته و 
+                    و سه عدد کوچکتر و بزرگتر آن را نمایش دهد
+
+                </p>
+            </div>
+            <div class="content">
+                <div class="sectionRight">
+                    <input type="number" class="numberQ12_1" placeholder="عدد اول">
+                    <input type="number" class="numberQ12_2" placeholder="عدد دوم">
+                    <input type="number" class="numberQ12_3" placeholder="عدد سوم">
+                    <input type="number" class="numberQ12_4" placeholder="عدد چهارم">
+                    <input type="number" class="numberQ12_5" placeholder="عدد پنجم">
+                    <input type="number" class="numberQ12_6" placeholder="عدد ششم">
+                </div>
+                <div class="sectionLeft sectionLeftQ12"></div>
+            </div>
+            
+        </div>
+
+
+
+        <div class="questionBox">
+            <div class="title">
+                <p>
+                    <span>13</span>
+
+                    
+        ضلع یک لوزی را گرفته و آن را به صورت توخالی و تو پر رسم نماید
+
+
+                </p>
+            </div>
+            <div class="content">
+                <div class="sectionRight">
+                    <input type="number" class="numberQ13_1" placeholder="ضلع لوزی">
+                    <div class="checkBox"> 
+                        تو پر باشه ؟
+                        <div class="cbx">
+                            <input id="cbx" type="checkbox" onchange="filldiamond(this)" />
+                            <label for="cbx"></label>
+                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                            </svg>
+                        </div>
+                        <!-- Gooey-->
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <defs>
+                                <filter id="goo">
+                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo"></fecolormatrix>
+                                    <feblend in="SourceGraphic" in2="goo"></feblend>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="sectionLeft sectionLeftQ13"></div>
+            </div>
+            
+        </div>
 
 
 
 
 
+        <div class="questionBox">
+            <div class="title">
+                <p>
+                    <span>14</span>
+                    مقسوم علیه های عدد داده شده را نمایش دهید
+                </p>
+            </div>
+            <div class="content">
+                <div class="sectionRight">
+                    <input type="number" class="numberQ14_1" placeholder="عدد را وارد کنید">
+                </div>
+                <div class="sectionLeft sectionLeftQ14"></div>
+            </div>
+            
+        </div>
 
-
-
-
-
+       
 
 
 
@@ -218,35 +406,9 @@
                 شعاع دایره را گرفته قطر، محیط و مساحت آن را به‌دست آورید.
             </p>
         </div>
-        <div class="content">
-            <div class="sectionRight">
-                <input type="number" class="n" placeholder="عرض مستطیل" max="30">
-                <input type="number" class="m" placeholder="طول مستطیل" max="30">
-                 <div class="checkBox">
-                    تو پر باشه ؟
-                     <div class="cbx">
-                  <input id="cbx" type="checkbox" onchange="fillRectangle(this)"/>
-                  <label for="cbx"></label>
-                  <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
-                    <path d="M2 8.36364L6.23077 12L13 2"></path>
-                  </svg>
-                </div>
-                <!-- Gooey-->
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                  <defs>
-                    <filter id="goo">
-                      <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
-                      <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo"></fecolormatrix>
-                      <feblend in="SourceGraphic" in2="goo"></feblend>
-                    </filter>
-                  </defs>
-                </svg>
-                 </div>
-                
-            </div>
-            <div class="sectionLeft sectionLeftQ2"></div>
-        </div> -->
-    <!-- </div> -->
+        -->
+
+    </div>
 
     </div>
 
@@ -297,56 +459,16 @@ pi *  (R*R) // masahat -->
 
 
 
-    
 
 
 
-    /*$input = $_POST['numbers'];
-function minMax($array){
-	// $array;
-	$min = min($array);
-	$max = max($array);
-	return["minimum"=>$min,"maximum"=>$max];
-}
-var_dump(minMax($input));
-*/
+
+
 
 
     /*
 $array = $_POST['numbers'];
 
-$n1 = $n2 = $n3 = 1000000;  // some high number
-$m1 = $m2 = $m3 = 0 ;
-for ($i = 1 ; $i <= count($array); $i++) {
-    $x = $array[$i] ; 
-    //min        
-    if ($x <= $n1){
-        $n3 = $n2 ;
-        $n2 = $n1 ;            
-        $n1 = $x ;
-    } elseif ($x < $n2){
-        $n3 = $n2;
-        $n2 = $x;
-    } elseif ($x < $n3){
-        $n3 = $x;
-    }
-
-    //max
-    if ($x >= $m1){
-        $m3 = $m2 ;
-        $m2 = $m1 ;            
-        $m1 = $x ;
-    } elseif ($x > $m2){
-        $m3 = $m2;
-        $m2 = $x;
-    } elseif ($x > $m3){
-        $m3 = $x;
-    }        
-
-}
-
-echo "Min Number = $n1 $n2 $n3<br>";
-echo "Max Number = $m1 $m2 $m3";
 
 
 */
@@ -371,66 +493,6 @@ for ($i = $a; $i > 0; $i--) {
 echo "</pre>";
 */
 
-    echo "<pre>";
-    function printPattern($n, $filled = false)
-    {
-
-        $k = 0;
-
-        // Print upper triangle 
-        for ($i = 1; $i <= $n; $i++) {
-
-            // Print spaces 
-            for ($j = 1; $j <= $n - $i; $j++) {
-                // echo " &nbsp;"; 
-                echo ($filled !== false) ? "&nbsp;" : " &nbsp;";
-            }
-
-            // Print # 
-            while ($k != (2 * $i - 1)) {
-                if ($k == 0 or $k == 2 * $i - 2)
-                    echo "*";
-                else
-                    echo ($filled !== false) ? " " : "*";
-                $k++;
-            }
-            $k = 0;
-
-            // move to next row 
-            echo "\n";
-        }
-        $n--;
-
-        // Print lower triangle 
-        for ($i = $n; $i >= 1; $i--) {
-
-            // Print spaces 
-            for ($j = 0; $j <= $n - $i; $j++) {
-                echo ($filled !== false) ? "&nbsp;" : " &nbsp;";
-            }
-
-            // Print # 
-            $k = 0;
-            while ($k != (2 * $i - 1)) {
-                if ($k == 0 or $k == 2 * $i - 2)
-                    echo "*";
-                else
-
-                    echo ($filled !== false) ? " " : "*";
-                $k++;
-            }
-            echo "\n";
-        }
-    }
-
-    // Driver Code 
-    $n = 12;
-    printPattern($n, true);
-
-    // This Code is contributed by mits  
-
-
-    echo "</pre>";
 
     /*
 function printDivisors($n) 
@@ -446,33 +508,8 @@ printDivisors();
 
 
 
-    /*function printRectangle($h , $w, $filled = false) 
-{ 
-    for ($i = 0; $i < $h; $i++) 
-    { 
-        echo"<br>"; 
-        for ($j = 0; $j < $w; $j++) 
-        { 
-              
-            // Print @ if this is first row 
-            // or last row. Or this column 
-            // is first or last. 
-            if ($i == 0 || $i == $h - 1 ||  
-                $j == 0 || $j == $w - 1) 
-            echo"*"; 
-            else
-            
-            echo ($filled !== false) ? "*" : "&nbsp;&nbsp;";  
-        } 
-    } 
-} 
-  
-    // Driver code 
-    $h = 20; 
-    $w = 10	; 
-    printRectangle($h, $w,false);
 
-*/
+
 
     /*for($i=5;$i>=1;$i--){  
 	for($j=$i;$j>=1;$j--){  
