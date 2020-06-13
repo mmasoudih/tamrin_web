@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>تمرین های php </title>
+    <title>محمد مسعودی حصار - تمرین php</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/axios.min.js"></script>
@@ -17,7 +17,7 @@
 
     <div class="nav">
         <div>محمد مسعودی حصار</div>
-        <div><a href="">دانلود سورس پروژه</a></div>
+        <div><a href="https://github.com/mmasoudih/tamrin_web/archive/master.zip" target="_blank">دانلود سورس پروژه</a></div>
     </div>
     <div id="particles-js"></div>
 
