@@ -207,7 +207,7 @@ if (isset($_GET['q_10'])) {
             for ($i = 0; $i <= $num1; $i++) {
                 $triangle1 .= "<br>";
                 for ($j = 1; $j <= $i; $j++) {
-                    if ($isfilled === 1) {
+                    if ($isfilled === 2) {
                         $triangle1 .= "*";
                     } else {
                         $triangle1 .= ($j == 1 || $j == $i || $i == $num1) ? '*' : '&nbsp;';
@@ -218,7 +218,7 @@ if (isset($_GET['q_10'])) {
             for ($i = 0; $i <= $num1; $i++) {
                 $triangle2 .= "<br>";
                 for ($j = $num1; $j >= $i; $j--) {
-                    if ($isfilled === 1) {
+                    if ($isfilled === 2) {
                         $triangle2 .= "*";
                     } else {
                         $triangle2 .= ($j == $num1 || $j == $i || $i == 0) ? '*' : '&nbsp;';
@@ -232,7 +232,7 @@ if (isset($_GET['q_10'])) {
                     $triangle3 .= '&nbsp';
                 for ($j = 1; $j <= $i; $j++) {
 
-                    if ($isfilled === 1) {
+                    if ($isfilled === 2) {
                         $triangle3 .= "*";
                     } else {
                         $triangle3 .= ($j == 1 || $j == $i || $i == $num1) ? '*' : '&nbsp';
@@ -245,7 +245,7 @@ if (isset($_GET['q_10'])) {
                 for ($j = 0; $j < $num1 - $i; $j++)
                     $triangle4 .= '&nbsp;';
                 for ($j = 1; $j <= $i; $j++) {
-                    if ($isfilled === 1) {
+                    if ($isfilled === 2) {
                         $triangle4 .= "*";
                     } else {
                         $triangle4 .= ($j == 1 || $j == $i || $i == $num1) ? '*' : '&nbsp;';
