@@ -15,13 +15,17 @@
 <body>
 
 
-
+    <div class="nav">
+        <div>محمد مسعودی حصار</div>
+        <div><a href="">دانلود سورس پروژه</a></div>
+    </div>
     <div id="particles-js"></div>
 
 
 
 
     <div class="container">
+    <br><br><br>
         <div class="questionBox">
             <div class="title">
                 <p>
@@ -188,7 +192,7 @@
                     <span>9</span>
 
                     طول و عرض مستطیل را گرفته و آن را رسم نمایید
-                    
+
                 </p>
             </div>
             <div class="content">
@@ -220,7 +224,7 @@
                 </div>
                 <div class="sectionLeft sectionLeftQ9"></div>
             </div>
-            
+
         </div>
 
 
@@ -234,15 +238,15 @@
                 <p>
                     <span>10</span>
 
-                   ضلع مثلث را گرفته و آن را رسم کنید
+                    ضلع مثلث را گرفته و آن را رسم کنید
                 </p>
             </div>
             <div class="content">
 
                 <div class="sectionRight">
                     <input type="number" class="numberQ10_1" placeholder="ضلع مثلث" max="30">
-                   
-                    <div class="checkBox"> 
+
+                    <div class="checkBox">
                         تو پر باشه ؟
                         <div class="cbx">
                             <input id="cbx" type="checkbox" onchange="fillTriangle(this)" />
@@ -266,7 +270,7 @@
                 </div>
                 <div class="sectionLeft sectionLeftQ10"></div>
             </div>
-            
+
         </div>
 
 
@@ -288,12 +292,12 @@
                     <input type="number" class="numberQ11_1" placeholder="عدد اول">
                     <input type="number" class="numberQ11_2" placeholder="عدد دوم">
                     <input type="number" class="numberQ11_3" placeholder="عدد سوم">
-                   
-                    
+
+
                 </div>
                 <div class="sectionLeft sectionLeftQ11"></div>
             </div>
-            
+
         </div>
 
 
@@ -302,7 +306,7 @@
                 <p>
                     <span>12</span>
 
-                    چند عدد را گرفته و 
+                    چند عدد را گرفته و
                     و سه عدد کوچکتر و بزرگتر آن را نمایش دهد
 
                 </p>
@@ -318,7 +322,7 @@
                 </div>
                 <div class="sectionLeft sectionLeftQ12"></div>
             </div>
-            
+
         </div>
 
 
@@ -328,8 +332,8 @@
                 <p>
                     <span>13</span>
 
-                    
-        ضلع یک لوزی را گرفته و آن را به صورت توخالی و تو پر رسم نماید
+
+                    ضلع یک لوزی را گرفته و آن را به صورت توخالی و تو پر رسم نماید
 
 
                 </p>
@@ -337,7 +341,7 @@
             <div class="content">
                 <div class="sectionRight">
                     <input type="number" class="numberQ13_1" placeholder="ضلع لوزی">
-                    <div class="checkBox"> 
+                    <div class="checkBox">
                         تو پر باشه ؟
                         <div class="cbx">
                             <input id="cbx" type="checkbox" onchange="filldiamond(this)" />
@@ -360,7 +364,7 @@
                 </div>
                 <div class="sectionLeft sectionLeftQ13"></div>
             </div>
-            
+
         </div>
 
 
@@ -380,10 +384,10 @@
                 </div>
                 <div class="sectionLeft sectionLeftQ14"></div>
             </div>
-            
+
         </div>
 
-       
+
 
 
 
@@ -399,14 +403,6 @@
 
 
 
-    <!-- <div class="questionBox">
-        <div class="title">
-            <p>
-                <span>1</span>
-                شعاع دایره را گرفته قطر، محیط و مساحت آن را به‌دست آورید.
-            </p>
-        </div>
-        -->
 
     </div>
 
@@ -416,171 +412,6 @@
 
 
 
-
-
-
-
-
-
-
-    <!-- 
-<input type="text" class="radius">
-<button onclick="func()">pass data</button>
-
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST"> -->
-    <!-- <input type="text" name="radius" placeholder="شعاع دایره را وارد کنید"> -->
-    <!-- 	<input type="text" name="numbers[1]">
-<input type="text" name="numbers[2]">
-<input type="text" name="numbers[3]">
-<input type="text" name="numbers[4]">
-<input type="text" name="numbers[5]">
-<input type="text" name="numbers[6]">
-<input type="text" name="numbers[7]">
-<input type="text" name="numbers[8]">
-<input type="text" name="numbers[9]"> -->
-
-    <!-- <input type="submit" value="محاسبه کن"> -->
-    <!-- </form> -->
-    <!-- shoa * pi * 2 // mohit
-pi *  (R*R) // masahat -->
-    <?php
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-$array = $_POST['numbers'];
-
-
-
-*/
-
-    /*echo "<pre>";
-$a = 20;
-for ($i = 1; $i < $a; $i++) {
-    for ($j = $i; $j < $a; $j++)
-        echo "&nbsp;&nbsp;&nbsp;";
-    for ($j = 2 * $i - 1; $j > 0; $j--)
-        echo ("&nbsp;*");
-    echo "<br>";
-}
-// $n = 8;
-for ($i = $a; $i > 0; $i--) {
-    for ($j = $a - $i; $j > 0; $j--)
-        echo "&nbsp;&nbsp;&nbsp;";
-    for ($j = 2 * $i - 1; $j > 0; $j--)
-        echo ("&nbsp;*");
-    echo "<br>";
-}
-echo "</pre>";
-*/
-
-
-    /*
-function printDivisors($n) 
-{ 
-    for ($i = 1; $i <= $n; $i++) 
-        if ($n % $i == 0) 
-            echo $i," "; 
-} 
- 
-
-printDivisors(); 
-  */
-
-
-
-
-
-
-    /*for($i=5;$i>=1;$i--){  
-	for($j=$i;$j>=1;$j--){  
-	echo "*";  
-	}  
-	echo "<br>";  
-}  
- 
-
-
-for($i=0;$i<=15;$i++){  
-	for($j=1;$j<=$i;$j++){  
-		echo  "*";  
-	}  
-echo "<br>";  
-}   
-
-
-
-
-
-for($i=0;$i<=15;$i++){  
- for($j=1;$j<=$i;$j++){  
-  echo  ($j == 1 || $j == $i || $i == 15) ? '*' : '&nbsp; ';  
- }  
-echo "<br>";  
-}
-
-
-
-for($i=0;$i <= 15;$i++){  
- for($j=15;$j >= $i;$j--){  
-  echo  ($j == 15 || $j == $i || $i == 0) ? '*' : '&nbsp; ';  
-  // echo "*";
- } 
-echo "<br>";  
-}
-
-
-for($i=0;$i<=15;$i++) {  
-    for ($j = 0; $j < 15 - $i; $j++)
-        echo '&nbsp ';
-    for($j=1;$j<=$i; $j++)
-        echo  ($j == 1 || $j == $i || $i == 15) ? '*' : '&nbsp ';
-    echo "<br>";  
-}
-
-
-
-for ($i = 15; $i >= 0; $i--) {  
-    for ($j = 1; $j <= $i; $j++)
-        echo  ($j == 1 || $j == $i || $i == 15) ? '*' : '&nbsp;&nbsp';
-    echo "<br>";  
-}
-
-
-for ($i = 15; $i >= 0; $i--) { 
-    for ($j = 0; $j < 15 - $i; $j++)
-        echo '&nbsp;&nbsp';
-    for ($j = 1; $j <= $i; $j++)
-        echo  ($j == 1 || $j == $i || $i == 15) ? '*' : '&nbsp;&nbsp';
-    echo "<br>";  
-}*/
-    // for($i=0;$i<=5;$i++){  
-    // 	for($j=5-$i;$j>=;$j--){  
-    // 	echo "* ";  
-    // 	}  
-    // echo "<br>";  
-    // }  
-
-    ?>
 
 
 </body>
